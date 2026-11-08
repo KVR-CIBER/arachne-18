@@ -4740,7 +4740,7 @@
 			)
 		)
 		(path "/d040710f-c9a0-594b-931e-b72c287a39c1")
-		(attr through_hole dnp)
+		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.38 -1.38)
@@ -12298,7 +12298,7 @@
 			)
 		)
 		(path "/c3cdc8b1-e076-5a73-abdc-409249ce2456")
-		(attr through_hole dnp)
+		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.38 -1.38)
@@ -16771,7 +16771,7 @@
 			)
 		)
 		(path "/4d547a67-2285-5a41-bad5-dc066c545112")
-		(attr through_hole dnp)
+		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.38 -1.38)

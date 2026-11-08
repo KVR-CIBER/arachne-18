@@ -25,7 +25,8 @@ LCSC = {'AOD4185': 'C400894', 'BZT52C15': 'C173427', 'SMBJ15CA': 'C78410', '330u
         'CM5 (wireless)': 'C6782225 x2 (connectors only)', '12V IN': '(solder pads, no part)', '5V PI': '(solder pads, no part)',
         # 2026-10-21 price pass: JLC basic parts wherever one exists
         '10u 25V': 'C15850', '47u 10V': 'C96123', '22u': 'C45783', 'LED 5V': 'C2286', 'LED ESP': 'C2286', 'SS54': 'C22452',
-        '470k': 'C23178', '220k': 'C22961', '27k': 'C22967', 'LSM6DS3TR-C': 'C967633'}
+        '470k': 'C23178', '220k': 'C22961', '27k': 'C22967', 'LSM6DS3TR-C': 'C967633',
+        'SENSOR S': 'C2932706', 'SENSOR V': 'C2932706', 'SENSOR G': 'C2932706'}   # 1x19 header, JLC THT (2026-11-08)
 
 
 def lcsc(value):
@@ -59,7 +60,8 @@ def main():
     FP = {p['ref']: p['fp'].split(':')[1] for p in design.parts}
     ROT = [(r'^SOT-223', 180), (r'^SOT-23', 180), (r'^CP_Elec_', 180), (r'^Texas_R-PDSO-G8', 270), (r'^SOIC-', 270),
            (r'^QFN-', 90), (r'^JST_SH_SM', 180),
-           (r'^TO-252', 180)]                                 # TO-252: seen 180 deg off in the JLC preview (2026-10-21)
+           (r'^TO-252', 180),                                 # TO-252: seen 180 deg off in the JLC preview (2026-10-21)
+           (r'^PinHeader_1x', 270)]                           # JLC HDR-TH_19P: pins along +X at 0 deg, KiCad along +Y
 
     # JLC places every part on the centre of its pads; KiCad's origin is pin 1 for connectors and the body centre for
     # modules. Use the pad-field centre from the board (tools/padcentres.py) for all parts.
