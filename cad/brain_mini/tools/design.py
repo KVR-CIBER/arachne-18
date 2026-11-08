@@ -203,7 +203,7 @@ G = 'Sensor-strook (G V S per GPIO) + I2C'
 for ref, row, nets_ in (('J14', 0, STRIP), ('J15', 1, ['3V3'] * len(STRIP)), ('J16', 2, ['GND'] * len(STRIP))):
     P(ref, 'Connector_Generic:Conn_01x19', 'Connector_PinHeader_2.54mm:PinHeader_1x19_P2.54mm_Vertical',
       ('SENSOR ' + 'SVG'[row]), {i + 1: n for i, n in enumerate(nets_)}, (STRIP_X0, STRIP_Y[row], 90),
-      mpn='1x19 pin header 2.54 mm (row ' + 'SVG'[row] + ' of the sensor strip), JLC THT: KH-2.54PH180-1X19P-L11.5 C2932706', group=G)
+      mpn='1x19 pin header 2.54 mm (row ' + 'SVG'[row] + ' of the sensor strip), hand-soldered', dnp=True, group=G)
 for ref, x in (('J17', -40.0), ('J18', -31.0)):
     P(ref, 'Connector_Generic_MountingPin:Conn_01x04_MountingPin', 'Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal',
       'I2C', {1: 'GND', 2: '3V3', 3: 'IMU_SDA', 4: 'IMU_SCL', 'MP': 'GND'}, (x, 35.5, 180), mpn='JST SM04B-SRSS-TB (Qwiic / STEMMA QT, optional)', group=G)
@@ -227,6 +227,15 @@ def nets():
     for p in parts:
         s |= set(p['pins'].values())
     return sorted(s)
+
+
+# ---------------------------------------------------------------- 2026-11-08 cheapest JLC order (Kobe): optional parts not
+# placed by JLC (footprints stay, hand-solder later if wanted). Safe without them: Q1 Vgs = -12.6 V via R1 (max +-20 V),
+# USB D+/D- are copper-connected without U10, ESP boots/flashes over native USB without the buttons.
+HAND = {'D1', 'D2', 'U10', 'J17', 'J18', 'SW1', 'SW2'}
+for _p in parts:
+    if _p['ref'] in HAND:
+        _p['dnp'] = True; DNP.add(_p['ref'])
 
 
 def outline(inset=0.0, n=10):

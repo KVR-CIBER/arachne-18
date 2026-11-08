@@ -7161,7 +7161,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "ccc6e16c-b05b-5396-9622-91dffdfd89db")
 		(property "Reference" "D2"
 			(at 86.36 29.25 0)
@@ -7270,7 +7270,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "27ed8d45-88ad-5c08-a9a0-868869a67eb6")
 		(property "Reference" "D1"
 			(at 116.84 29.25 0)
@@ -13000,7 +13000,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "9b574876-d549-51b5-aedf-7af1143eaf1d")
 		(property "Reference" "SW1"
 			(at 33.02 324.652 0)
@@ -13109,7 +13109,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "75cd3e2e-5be5-5bd4-b3c3-cbdc6512342f")
 		(property "Reference" "SW2"
 			(at 66.04 324.652 0)
@@ -17549,7 +17549,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "85da4e13-c6a3-5e91-bda9-0a9263534692")
 		(property "Reference" "U10"
 			(at 287.02 106.72 0)
@@ -17888,7 +17888,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "d040710f-c9a0-594b-931e-b72c287a39c1")
 		(property "Reference" "J14"
 			(at 220.98 184.19 0)
@@ -18405,7 +18405,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "4d547a67-2285-5a41-bad5-dc066c545112")
 		(property "Reference" "J15"
 			(at 241.3 184.19 0)
@@ -18922,7 +18922,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "c3cdc8b1-e076-5a73-abdc-409249ce2456")
 		(property "Reference" "J16"
 			(at 261.62 184.19 0)
@@ -19439,7 +19439,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "cd09a128-69b6-5677-b5c3-9f0ca1abb91f")
 		(property "Reference" "J17"
 			(at 284.48 189.27 0)
@@ -19620,7 +19620,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "76f21a7c-b60f-5b34-bfe2-e4636f0c2852")
 		(property "Reference" "J18"
 			(at 309.88 189.27 0)
